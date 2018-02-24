@@ -16,7 +16,7 @@ if (isset($_POST['email']) && isset($_POST['pass'])) {
 		{
 			// Si il y a bien un mot de passe correspondant, on redirige vers le point d'entrée
 			if (password_verify($pass, $donnees['pass'])) {
-				header("Location:entree.php");
+				header("Location:../entree.php");
 			}
 			else {
 				echo "indiquer un message d'erreur";

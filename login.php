@@ -11,7 +11,7 @@
 <div class="container">
 
 
-<form action="Controller/LogControl.php" method="post">
+<form action="Controller/loginControl.php" method="post">
   <div class="form-group">
     <label for="exampleInputEmail1">Email address</label>
     <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelp" placeholder="Enter email">

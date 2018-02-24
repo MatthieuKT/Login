@@ -20,8 +20,10 @@ if (isset($_POST['email']) && isset($_POST['pass']) && isset($_POST['passControl
 
 			if ($row > 0) {
 				echo "cet utilisateur existe déjà";
+				header("Location:../login.php?param=2");
 			} else {
-			 	$addUser = mysqli_query($connexion,'INSERT INTO user(email, pass) VALUES ("'.$email.'", "'.$hash.'")');
+			 	mysqli_query($connexion,'INSERT INTO user(email, pass) VALUES ("'.$email.'", "'.$hash.'")');
+			 	header("Location:../login.php?param=1");
 			}
 		} else {
 			echo "le mot de passe doit contenir plus de 5 carractères";

@@ -10,6 +10,23 @@
 
 <div class="container">
 
+<?php
+if (isset($_GET['param'])) {
+  if ($_GET['param'] === '2') {
+    echo '<div class="alert alert-danger" role="alert">
+    Cet utilisateur existe déjà!
+    </div>';
+
+  }
+
+  elseif ($_GET['param'] === '1') {
+    echo '<div class="alert alert-success" role="alert">
+    Félicitations! Votre compte à bien été créé!
+    </div>';
+  }
+}
+?>
+
 
 <form action="Controller/loginControl.php" method="post">
   <div class="form-group">
@@ -22,7 +39,6 @@
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
-
 
 </div> <!--/container-->
 </body>
